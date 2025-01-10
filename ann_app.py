@@ -6,16 +6,16 @@ import tensorflow as tf
 import pickle
 
 # Load the model
-model = tf.keras.models.load_model('./models/ann_model.h5')
+model = tf.keras.models.load_model('ann_model.h5')
 
 # load encoders and scalers
-with open('./encoders/label_encoder_gender.pkl', 'rb') as file:
+with open('label_encoder_gender.pkl', 'rb') as file:
     gender_label_encoder = pickle.load(file)
 
-with open('./encoders/onehotencoder.pkl', 'rb') as file:
+with open('onehotencoder.pkl', 'rb') as file:
     geo_label_encoder = pickle.load(file)
 
-with open('./scalers/ann_scaler.pkl', 'rb') as file:
+with open('ann_scaler.pkl', 'rb') as file:
     scalers = pickle.load(file)
 
 # Streamlit App
